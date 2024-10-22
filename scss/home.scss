@@ -1,0 +1,111 @@
+#hero {
+    height: 1098px;
+    margin-top: 76px;
+    position: relative;
+    //padding: 141px 150px;
+
+    background-image: 
+    linear-gradient(to bottom, $bg-color, rgba(0,0,0,0) 50%, $bg-color),
+    url('../assets/images/hero-img.png');
+    background-position: center;
+    background-size: cover;
+
+    #hero-title {
+        margin: 141px 150px;
+    }
+
+    h1{
+        color:$site-black;
+        font-family: ital;
+        font-size: 128px;
+    }
+
+    h2 {
+        color:$site-black;
+        font-family: lexend-giga-el;
+        font-size: 48px;
+        margin-top: -25px;
+    }
+
+    img {
+        position: absolute;
+        left: -40px;
+        top: -36px;
+    }
+}
+
+#about {
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    h3{
+        font-family: lexend-giga-el;
+        font-size: 48px;
+    }
+
+    #about-content {
+        margin-top: 47px;
+        position: relative;
+        display: flex;
+        width: 100%;
+        background-image: linear-gradient(to right, rgba(0,0,0,0), $content-color 30%, $content-color 70%, rgba(0,0,0,0));
+
+        #about-photo {
+            width: 510px;
+            height: 674px;
+            background-image: linear-gradient(to right, $bg-color, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 65%, $content-color),url(../assets/images/hello-img.png);
+        }
+
+        #about-text {
+            max-width: 1000px;
+            padding: 78px 65px;
+            h1 {
+                font-family: ital;
+                font-size: 90px;
+            }
+
+            p {
+                font-family: lexend-deca-el;
+                font-size: 30px;
+            }
+        }
+
+        #about-socials {
+            position: absolute;
+            display: flex;
+            gap: 33px;
+            right: 0;
+            bottom: -62.5px;
+
+            a {
+                width: 125px;
+                height: 125px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 70px;
+            }
+
+            a:nth-child(1){
+                background-color: $style-color-1;
+            }
+
+            a:nth-child(2){
+                background-color: $style-color-2;
+            }
+
+            a:nth-child(3){
+                background-color: $style-color-3;
+            }
+        }
+
+        img.glitter {
+            position: absolute;
+            right: 0;
+            top: -50px;
+        }
+    }
+}

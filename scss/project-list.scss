@@ -1,0 +1,99 @@
+.overlay-gradient {
+    position: absolute;
+    width: 100%;
+    height: 476px;
+}
+
+.orange {
+    background-image: linear-gradient(24deg, rgba(0,0,0,0) 66%, $style-color-4);
+}
+
+.green {
+    background-image: linear-gradient(24deg, rgba(0,0,0,0) 66%, $style-color-2);
+}
+
+#project-list {
+    .project-list-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-top: 69px;
+        
+        button {
+            @include main-btn;
+        }
+
+        h1 {
+            font-family: lexend-giga-m;
+            font-size: 48px;
+            color: $site-black;
+        }
+
+        div {
+            width: 337px;
+        }
+    }
+
+    .project-list-body {
+        margin-top: 80px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 51px;
+
+        .project-list-row {
+            display: flex;
+            justify-content: space-between;
+
+            .project-list-image{
+                width: 48%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 33px;
+
+                button {
+                    @include main-btn;
+                }
+
+                .project-thumbs{
+                    display: flex;
+                    justify-content: center;
+                    gap: 23px;
+
+                    img {
+                        width: 150px;
+                    }
+
+                    .selected-thumb {
+                        border: 5px solid $style-color-2;
+                    }
+                }
+            }
+
+            .project-list-text {
+                width: 48%;
+
+                h2 {
+                    font-family: lexend-deca;
+                    font-size: 38px;
+                    color: $site-black;
+                }
+
+                h3 {
+                    font-family: lexend-exa;
+                    font-size: 20px;
+                    color: $site-black;
+                }
+
+                p {
+                    font-family: lexend-deca-el;
+                    font-size: 20px;
+                    color: $site-black;
+                    margin-top: 11px;
+                }
+            }
+        }
+    }
+}

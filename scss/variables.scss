@@ -1,0 +1,26 @@
+//Colors
+$bg-color: #E8E5DC;
+$site-white: #fff;
+$site-black: #000;
+$content-color: #D4D4D4;
+$style-color-1: #FFFF94;
+$style-color-2: #94FF9B;
+$style-color-3: #94FFF6;
+$style-color-4: #FFAA34;
+
+//Sizes
+$content-width: 1666px;
+
+//Mixins
+@mixin main-btn{
+    width: 337px;
+    height: 71px;
+    filter: drop-shadow(5px 5px 6px rgba($site-black, .5));
+    border:none;
+    border-radius: 50px;
+    font-family: lexend-deca-el;
+    font-size: 40px;
+    color: $site-black;
+    background-color: $site-white;
+    cursor: pointer;
+}

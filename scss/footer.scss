@@ -1,0 +1,41 @@
+footer {
+    margin-top: 308px;
+    height: 411px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), $content-color 50%);
+
+    h2 {
+        font-family: lexend-l;
+        color: $site-black;
+        font-size: 48px;
+    }
+
+    h3 {
+        font-family: lexend-deca-el;
+        color: $site-black;
+        font-size: 32px;
+    }
+
+    nav {
+        display: flex;
+        gap: 54px;
+        margin-top: 46px;
+        a {
+            font-family: lexend-deca-el;
+            color: $site-black;
+            font-size: 32px;
+            text-decoration: none;
+        }
+    }
+
+    p {
+        font-family: lexend-l;
+        color: $site-black;
+        font-size: 32px;
+        margin-top: 11px;
+    }
+}
