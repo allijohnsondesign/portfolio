@@ -2,6 +2,7 @@
     height: 1098px;
     margin-top: 76px;
     position: relative;
+    @include margin;
     //padding: 141px 150px;
 
     background-image: 
@@ -34,15 +35,83 @@
     }
 }
 
+#process {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    img.glitter-3{
+        position: absolute;
+        right: 15px;
+        top: 55px;
+    }
+
+    h1 {
+        font-family: lexend-giga-m;
+        font-size: 48px;
+        margin-top: 68px;
+    }
+
+    .process-container {
+        display: flex;
+        margin-left: 151px;
+        margin-top: 105px;
+
+        .process-text {
+            width: 36%;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-family: lexend-el;
+                font-size: 32px;
+            }
+
+            .process-text-body {
+                display: flex;
+                gap: 35px;
+                margin-top: 61px;
+
+                h4 {
+                    font-family: lexend-exa;
+                    font-size: 20px;
+                    margin-bottom: 12px;
+                }
+
+                li {
+                    font-family: lexend-deca-el;
+                    font-size: 20px;
+                }
+
+                .process-text-left {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 46px;
+                }
+
+                .process-text-right {
+                    padding-top: 140px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 121px;
+                }
+            }
+        }
+    }
+}
+
 #about {
     margin-top: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    @include margin;
 
     h3{
-        font-family: lexend-giga-el;
+        font-family: lexend-giga-m;
         font-size: 48px;
     }
 

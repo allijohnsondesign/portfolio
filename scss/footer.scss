@@ -32,10 +32,16 @@ footer {
         }
     }
 
-    p {
+    h4 {
         font-family: lexend-l;
         color: $site-black;
         font-size: 32px;
         margin-top: 11px;
+    }
+
+    p {
+        font-family: lexend-deca-el;
+        font-size: 20px;
+        margin-top: 38px;
     }
 }

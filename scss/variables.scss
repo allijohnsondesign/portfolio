@@ -7,6 +7,9 @@ $style-color-1: #FFFF94;
 $style-color-2: #94FF9B;
 $style-color-3: #94FFF6;
 $style-color-4: #FFAA34;
+$process-color-1: #FF5493;
+$process-color-2: #E770FF;
+$process-color-3: #9B94FF;
 
 //Sizes
 $content-width: 1666px;
@@ -23,4 +26,9 @@ $content-width: 1666px;
     color: $site-black;
     background-color: $site-white;
     cursor: pointer;
+}
+
+@mixin margin{
+    margin-left: 151px;
+    margin-right: 151px;
 }

@@ -2,6 +2,8 @@
     position: absolute;
     width: 100%;
     height: 476px;
+    z-index: 3;
+    pointer-events: none;
 }
 
 .orange {
@@ -17,7 +19,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        @include margin;
         margin-top: 69px;
         
         button {
@@ -37,7 +39,6 @@
 
     .project-list-body {
         margin-top: 80px;
-
         display: flex;
         flex-direction: column;
         gap: 51px;
@@ -45,6 +46,7 @@
         .project-list-row {
             display: flex;
             justify-content: space-between;
+            @include margin;
 
             .project-list-image{
                 width: 48%;
@@ -61,9 +63,10 @@
                     display: flex;
                     justify-content: center;
                     gap: 23px;
-
+                    
                     img {
                         width: 150px;
+                        cursor: pointer;
                     }
 
                     .selected-thumb {
@@ -87,11 +90,90 @@
                     color: $site-black;
                 }
 
-                p {
+                p, li {
                     font-family: lexend-deca-el;
                     font-size: 20px;
                     color: $site-black;
                     margin-top: 11px;
+                }
+            }
+        }
+
+        .project-list-process {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 145px;
+            margin-bottom: 300px;
+
+            .process-title {
+                font-family: lexend-deca;
+                font-size: 40px;
+                width: 375px;
+                height: 56px;
+                text-align: center;
+            }
+
+            .process-orange {
+                background-image: linear-gradient(to right, rgba($style-color-4,0), $style-color-4 50%, rgba($style-color-4,0));
+            }
+
+            .process-carousel {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin-top: 88px;
+
+                .process-carousel-main {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 94px;
+                    position: relative;
+                    width: 100%;
+
+                    .chevron {
+                        height: 100px;
+                        z-index: 1;
+                        cursor: pointer;
+                    }
+
+                    .process-carousel-content {
+                        width: 1000px;
+                        height: 740px;
+                        z-index: 1;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .process-carousel-bg {
+                        position: absolute;
+                        width: 100%;
+                        height: 400px;
+                        //background-color: blue;
+                        background-image: linear-gradient(to right, $process-color-1, rgba(0,0,0,0) 50%, $process-color-1);
+                    }
+                }
+
+                .process-carousel-caption {
+                    margin-top: 31px;
+
+                    h1 {
+                        font-family: lexend-giga-m;
+                        font-size: 32px;
+                        color: $site-black;
+                        text-align: center;
+                    }
+
+                    p {
+                        font-family: lexend-deca-el;
+                        font-size: 32px;
+                        color: $site-black;
+                        text-align: center;
+                        margin-top: 14px;
+                    }
                 }
             }
         }

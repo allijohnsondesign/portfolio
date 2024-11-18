@@ -62,7 +62,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 151px;
+  //margin: 0 151px;
   width: 100%;
   //max-width: $content-width;
+  position:relative;
 }

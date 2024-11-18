@@ -97,32 +97,35 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 151px;
   width: 100%;
+  position: relative;
 }
 
 nav.header {
-  background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.4) 64%, rgba(255, 255, 255, 0));
-  height: 64px;
+  background-image: linear-gradient(to right, #fff, white 64%, #e8e5dc);
+  height: 120px;
   display: flex;
   align-items: center;
-  margin-top: 101px;
   padding-left: 54px;
-  border-radius: 40px;
-  gap: 32px;
+  gap: 48px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 nav.header a {
   text-decoration: none;
   color: #000;
   font-family: lexend-el;
   font-size: 32px;
-  z-index: 1;
+  z-index: 3;
 }
 
 #hero {
   height: 1098px;
   margin-top: 76px;
   position: relative;
+  margin-left: 151px;
+  margin-right: 151px;
   background-image: linear-gradient(to bottom, #E8E5DC, rgba(0, 0, 0, 0) 50%, #E8E5DC), url("../assets/images/hero-img.png");
   background-position: center;
   background-size: cover;
@@ -147,15 +150,74 @@ nav.header a {
   top: -36px;
 }
 
+#process {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+#process img.glitter-3 {
+  position: absolute;
+  right: 15px;
+  top: 55px;
+}
+#process h1 {
+  font-family: lexend-giga-m;
+  font-size: 48px;
+  margin-top: 68px;
+}
+#process .process-container {
+  display: flex;
+  margin-left: 151px;
+  margin-top: 105px;
+}
+#process .process-container .process-text {
+  width: 36%;
+  display: flex;
+  flex-direction: column;
+}
+#process .process-container .process-text h3 {
+  font-family: lexend-el;
+  font-size: 32px;
+}
+#process .process-container .process-text .process-text-body {
+  display: flex;
+  gap: 35px;
+  margin-top: 61px;
+}
+#process .process-container .process-text .process-text-body h4 {
+  font-family: lexend-exa;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+#process .process-container .process-text .process-text-body li {
+  font-family: lexend-deca-el;
+  font-size: 20px;
+}
+#process .process-container .process-text .process-text-body .process-text-left {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+#process .process-container .process-text .process-text-body .process-text-right {
+  padding-top: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 121px;
+}
+
 #about {
   margin-top: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  margin-left: 151px;
+  margin-right: 151px;
 }
 #about h3 {
-  font-family: lexend-giga-el;
+  font-family: lexend-giga-m;
   font-size: 48px;
 }
 #about #about-content {
@@ -216,9 +278,11 @@ nav.header a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 151px;
+  margin-right: 151px;
 }
 #projects h1 {
-  font-family: lexend-giga-el;
+  font-family: lexend-giga-m;
   font-size: 48px;
   margin-top: 68px;
 }
@@ -299,6 +363,8 @@ nav.header a {
   position: absolute;
   width: 100%;
   height: 476px;
+  z-index: 3;
+  pointer-events: none;
 }
 
 .orange {
@@ -313,6 +379,8 @@ nav.header a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 151px;
+  margin-right: 151px;
   margin-top: 69px;
 }
 #project-list .project-list-header button {
@@ -344,6 +412,8 @@ nav.header a {
 #project-list .project-list-body .project-list-row {
   display: flex;
   justify-content: space-between;
+  margin-left: 151px;
+  margin-right: 151px;
 }
 #project-list .project-list-body .project-list-row .project-list-image {
   width: 48%;
@@ -371,6 +441,7 @@ nav.header a {
 }
 #project-list .project-list-body .project-list-row .project-list-image .project-thumbs img {
   width: 150px;
+  cursor: pointer;
 }
 #project-list .project-list-body .project-list-row .project-list-image .project-thumbs .selected-thumb {
   border: 5px solid #94FF9B;
@@ -388,11 +459,78 @@ nav.header a {
   font-size: 20px;
   color: #000;
 }
-#project-list .project-list-body .project-list-row .project-list-text p {
+#project-list .project-list-body .project-list-row .project-list-text p, #project-list .project-list-body .project-list-row .project-list-text li {
   font-family: lexend-deca-el;
   font-size: 20px;
   color: #000;
   margin-top: 11px;
+}
+#project-list .project-list-body .project-list-process {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 145px;
+  margin-bottom: 300px;
+}
+#project-list .project-list-body .project-list-process .process-title {
+  font-family: lexend-deca;
+  font-size: 40px;
+  width: 375px;
+  height: 56px;
+  text-align: center;
+}
+#project-list .project-list-body .project-list-process .process-orange {
+  background-image: linear-gradient(to right, rgba(255, 170, 52, 0), #FFAA34 50%, rgba(255, 170, 52, 0));
+}
+#project-list .project-list-body .project-list-process .process-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 88px;
+}
+#project-list .project-list-body .project-list-process .process-carousel .process-carousel-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 94px;
+  position: relative;
+  width: 100%;
+}
+#project-list .project-list-body .project-list-process .process-carousel .process-carousel-main .chevron {
+  height: 100px;
+  z-index: 1;
+  cursor: pointer;
+}
+#project-list .project-list-body .project-list-process .process-carousel .process-carousel-main .process-carousel-content {
+  width: 1000px;
+  height: 740px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+#project-list .project-list-body .project-list-process .process-carousel .process-carousel-main .process-carousel-bg {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  background-image: linear-gradient(to right, #FF5493, rgba(0, 0, 0, 0) 50%, #FF5493);
+}
+#project-list .project-list-body .project-list-process .process-carousel .process-carousel-caption {
+  margin-top: 31px;
+}
+#project-list .project-list-body .project-list-process .process-carousel .process-carousel-caption h1 {
+  font-family: lexend-giga-m;
+  font-size: 32px;
+  color: #000;
+  text-align: center;
+}
+#project-list .project-list-body .project-list-process .process-carousel .process-carousel-caption p {
+  font-family: lexend-deca-el;
+  font-size: 32px;
+  color: #000;
+  text-align: center;
+  margin-top: 14px;
 }
 
 footer {
@@ -425,11 +563,16 @@ footer nav a {
   font-size: 32px;
   text-decoration: none;
 }
-footer p {
+footer h4 {
   font-family: lexend-l;
   color: #000;
   font-size: 32px;
   margin-top: 11px;
+}
+footer p {
+  font-family: lexend-deca-el;
+  font-size: 20px;
+  margin-top: 38px;
 }
 
 /*# sourceMappingURL=style.css.map */

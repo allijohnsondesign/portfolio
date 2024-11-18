@@ -2,9 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include margin;
 
     h1 {
-        font-family: lexend-giga-el;
+        font-family: lexend-giga-m;
         font-size: 48px;
         margin-top: 68px;
     }
