@@ -483,6 +483,9 @@ nav.header a {
 #project-list .project-list-body .project-list-process .process-orange {
   background-image: linear-gradient(to right, rgba(255, 170, 52, 0), #FFAA34 50%, rgba(255, 170, 52, 0));
 }
+#project-list .project-list-body .project-list-process .process-green {
+  background-image: linear-gradient(to right, rgba(148, 255, 155, 0), #94FF9B 50%, rgba(148, 255, 155, 0));
+}
 #project-list .project-list-body .project-list-process .process-carousel {
   display: flex;
   flex-direction: column;

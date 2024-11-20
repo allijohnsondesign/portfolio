@@ -119,6 +119,10 @@
                 background-image: linear-gradient(to right, rgba($style-color-4,0), $style-color-4 50%, rgba($style-color-4,0));
             }
 
+            .process-green {
+                background-image: linear-gradient(to right, rgba($style-color-2,0), $style-color-2 50%, rgba($style-color-2,0));
+            }
+
             .process-carousel {
                 display: flex;
                 flex-direction: column;
