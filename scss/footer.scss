@@ -1,6 +1,6 @@
 footer {
-    margin-top: 308px;
-    height: 411px;
+    margin-top: 246px;
+    height: 329px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,23 +11,23 @@ footer {
     h2 {
         font-family: lexend-l;
         color: $site-black;
-        font-size: 48px;
+        font-size: 38px;
     }
 
     h3 {
         font-family: lexend-deca-el;
         color: $site-black;
-        font-size: 32px;
+        font-size: 26px;
     }
 
     nav {
         display: flex;
-        gap: 54px;
-        margin-top: 46px;
+        gap: 43px;
+        margin-top: 37px;
         a {
             font-family: lexend-deca-el;
             color: $site-black;
-            font-size: 32px;
+            font-size: 26px;
             text-decoration: none;
         }
     }
@@ -35,13 +35,13 @@ footer {
     h4 {
         font-family: lexend-l;
         color: $site-black;
-        font-size: 32px;
-        margin-top: 11px;
+        font-size: 26px;
+        margin-top: 9px;
     }
 
     p {
         font-family: lexend-deca-el;
-        font-size: 20px;
-        margin-top: 38px;
+        font-size: 16px;
+        margin-top: 30px;
     }
 }

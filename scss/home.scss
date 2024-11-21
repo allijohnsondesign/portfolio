@@ -1,5 +1,5 @@
 #hero {
-    height: 1098px;
+    height: 878px;
     margin-top: 76px;
     position: relative;
     @include margin;
@@ -12,19 +12,21 @@
     background-size: cover;
 
     #hero-title {
-        margin: 141px 150px;
+        margin: 112px 120px;
+        display: flex;
+        flex-direction: column;
     }
 
     h1{
         color:$site-black;
         font-family: ital;
-        font-size: 128px;
+        font-size: 102px;
     }
 
     h2 {
         color:$site-black;
         font-family: lexend-giga-el;
-        font-size: 48px;
+        font-size: 38px;
         margin-top: -25px;
     }
 
@@ -32,52 +34,122 @@
         position: absolute;
         left: -40px;
         top: -36px;
+        width: 256px;
+
+    }
+
+    @media screen and (max-width: 1200px) {
+        height: 680px;
+
+        #hero-title {
+            align-items: center;
+            margin: 50px 0;
+        }
+
+        h1 {
+            font-size: 70px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        img {
+            width: 160px;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        height: 400px;
+
+        img {
+            left: 0;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        img {
+            visibility: hidden;
+        }
     }
 }
 
 #process {
-    margin-top: 200px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
 
+    @media screen and (max-width: 1200px) {
+        margin-top: 40px;
+    }
+
     img.glitter-3{
         position: absolute;
-        right: 15px;
-        top: 55px;
+        right: 166px;
+        top: 120px;
+        width: 207px;
+
+        @media screen and (max-width: 1200px) {
+            visibility: hidden;
+        }
     }
 
     h1 {
         font-family: lexend-giga-m;
         font-size: 48px;
         margin-top: 68px;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 36px;
+        }
     }
 
     .process-container {
         display: flex;
-        margin-left: 151px;
-        margin-top: 105px;
+        justify-content: space-between;
+        //margin-left: 151px;
+        margin-top: 47px;
+        @include margin;
+
+        @media screen and (max-width: 1200px) {
+            flex-direction: column;
+        }
 
         .process-text {
             width: 36%;
             display: flex;
             flex-direction: column;
 
+            @media screen and (max-width: 1200px) {
+                width: 100%;
+                align-items: center;
+            }
+
             h3 {
                 font-family: lexend-el;
-                font-size: 32px;
+                font-size: 26px;
+
+                @media screen and (max-width: 1200px) {
+                    font-size: 18px;
+                    text-align: center;
+                }
             }
 
             .process-text-body {
                 display: flex;
                 gap: 35px;
-                margin-top: 61px;
+                margin-top: 50px;
+
+                @media screen and (max-width: 1200px) {
+                    justify-content: space-evenly;
+                }
 
                 h4 {
                     font-family: lexend-exa;
                     font-size: 20px;
-                    margin-bottom: 12px;
+                    margin-bottom: 5px;
                 }
 
                 li {
@@ -85,25 +157,57 @@
                     font-size: 20px;
                 }
 
+                li::marker {
+                    font-size: 16px;
+                }
+
                 .process-text-left {
                     display: flex;
                     flex-direction: column;
                     gap: 46px;
+
+                    @media screen and (max-width: 1200px) {
+                        
+                    }
                 }
 
                 .process-text-right {
-                    padding-top: 140px;
+                    padding-top: 100px;
                     display: flex;
                     flex-direction: column;
                     gap: 121px;
+
+                    @media screen and (max-width: 1200px) {
+                        gap: 46px;
+                        padding-top: 0;
+                    }
                 }
+            }
+        }
+
+        .process-graphic {
+            display: flex;
+            justify-content: right;
+
+            img {
+                height: 700px;
+            }
+
+            @media screen and (max-width: 1768px) {
+                img {
+                    height: fit-content;
+                }
+            }
+
+            @media screen and (max-width: 1200px) {
+                margin-top: 40px;
             }
         }
     }
 }
 
 #about {
-    margin-top: 160px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,6 +217,10 @@
     h3{
         font-family: lexend-giga-m;
         font-size: 48px;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 36px;
+        }
     }
 
     #about-content {
@@ -121,41 +229,71 @@
         display: flex;
         width: 100%;
         background-image: linear-gradient(to right, rgba(0,0,0,0), $content-color 30%, $content-color 70%, rgba(0,0,0,0));
+        @media screen and (max-width: 1500px) {
+            flex-direction: column;
+            align-items: center;
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0), $content-color 30%, $content-color 70%, rgba(0,0,0,0));
+        }
 
         #about-photo {
-            width: 510px;
-            height: 674px;
+            width: 408px;
+            height: 539px;
             background-image: linear-gradient(to right, $bg-color, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 65%, $content-color),url(../assets/images/hello-img.png);
+            background-position: center;
+            background-size: cover;
+
+            @media screen and (max-width: 1500px) {
+                background-image: linear-gradient(to bottom, $bg-color, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 65%, $content-color),url(../assets/images/hello-img.png);
+            }
         }
 
         #about-text {
-            max-width: 1000px;
-            padding: 78px 65px;
+            max-width: 800px;
+            padding: 62px 52px;
             h1 {
                 font-family: ital;
-                font-size: 90px;
+                font-size: 72px;
             }
 
             p {
                 font-family: lexend-deca-el;
-                font-size: 30px;
+                font-size: 24px;
+            }
+
+            @media screen and (max-width: 1500px) {
+                h1 {
+                    font-size: 56px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
             }
         }
 
         #about-socials {
             position: absolute;
             display: flex;
-            gap: 33px;
+            gap: 26px;
             right: 0;
             bottom: -62.5px;
 
+            @media screen and (max-width: 800px) {
+                position: relative;
+                margin-top: -60px;
+            }
+
             a {
-                width: 125px;
-                height: 125px;
+                width: 100px;
+                height: 100px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 border-radius: 70px;
+
+                img {
+                    width: 54px;
+                }
             }
 
             a:nth-child(1){
@@ -175,6 +313,7 @@
             position: absolute;
             right: 0;
             top: -50px;
+            width: 207px;
         }
     }
 }

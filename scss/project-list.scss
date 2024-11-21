@@ -4,6 +4,10 @@
     height: 476px;
     z-index: 3;
     pointer-events: none;
+
+    @media screen and (max-width: 800px) {
+        visibility: hidden;
+    }
 }
 
 .orange {
@@ -15,45 +19,62 @@
 }
 
 #project-list {
+    .project-list-button {
+        display: flex;
+        @include margin;
+        margin-top: 50px;
+        button {
+            @include main-btn;
+            width: 233px;
+            height: 51px;
+            font-size: 35px;
+        }
+    }
+
     .project-list-header {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         @include margin;
-        margin-top: 69px;
-        
-        button {
-            @include main-btn;
-        }
+        margin-top: 38px;
 
         h1 {
             font-family: lexend-giga-m;
             font-size: 48px;
             color: $site-black;
-        }
-
-        div {
-            width: 337px;
+            @media screen and (max-width: 1200px) {
+                font-size: 36px;
+                text-align: center;
+            }
         }
     }
 
     .project-list-body {
-        margin-top: 80px;
+        margin-top: 68px;
         display: flex;
         flex-direction: column;
-        gap: 51px;
+        gap: 45px;
 
         .project-list-row {
             display: flex;
             justify-content: space-between;
             @include margin;
 
+            @media screen and (max-width: 1200px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
             .project-list-image{
                 width: 48%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 33px;
+                gap: 28px;
+
+                @media screen and (max-width: 1200px) {
+                    width: 100%;
+                }
 
                 button {
                     @include main-btn;
@@ -67,6 +88,10 @@
                     img {
                         width: 150px;
                         cursor: pointer;
+
+                        @media screen and (max-width: 800px) {
+                            width: 20%;
+                        }
                     }
 
                     .selected-thumb {
@@ -78,23 +103,38 @@
             .project-list-text {
                 width: 48%;
 
+                @media screen and (max-width: 1200px) {
+                    width: 100%;
+                    margin-top: 50px;
+                }
+
                 h2 {
                     font-family: lexend-deca;
-                    font-size: 38px;
+                    font-size: 30px;
                     color: $site-black;
                 }
 
                 h3 {
                     font-family: lexend-exa;
-                    font-size: 20px;
+                    font-size: 18px;
                     color: $site-black;
                 }
 
                 p, li {
                     font-family: lexend-deca-el;
-                    font-size: 20px;
+                    font-size: 18px;
                     color: $site-black;
-                    margin-top: 11px;
+                    margin-top: 9px;
+                }
+
+                li::marker {
+                    font-size: 16px;
+                }
+
+                @media screen and (max-width: 1200px) {
+                    h2, h3{
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -104,8 +144,8 @@
             flex-direction: column;
             align-items: center;
             width: 100%;
-            margin-top: 145px;
-            margin-bottom: 300px;
+            margin-top: 30px;
+            margin-bottom: 100px;
 
             .process-title {
                 font-family: lexend-deca;
@@ -128,25 +168,25 @@
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
-                margin-top: 88px;
+                margin-top: 10px;
 
                 .process-carousel-main {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    gap: 94px;
+                    gap: 80px;
                     position: relative;
                     width: 100%;
 
                     .chevron {
-                        height: 100px;
+                        height: 80px;
                         z-index: 1;
                         cursor: pointer;
                     }
 
                     .process-carousel-content {
-                        width: 1000px;
-                        height: 740px;
+                        width: 800px;
+                        height: 592px;
                         z-index: 1;
                         display: flex;
                         align-items: center;
@@ -155,28 +195,30 @@
                     .process-carousel-bg {
                         position: absolute;
                         width: 100%;
-                        height: 400px;
-                        //background-color: blue;
+                        height: 320px;
                         background-image: linear-gradient(to right, $process-color-1, rgba(0,0,0,0) 50%, $process-color-1);
                     }
                 }
 
                 .process-carousel-caption {
-                    margin-top: 31px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
 
                     h1 {
                         font-family: lexend-giga-m;
-                        font-size: 32px;
+                        font-size: 26px;
                         color: $site-black;
                         text-align: center;
                     }
 
                     p {
                         font-family: lexend-deca-el;
-                        font-size: 32px;
+                        font-size: 24px;
                         color: $site-black;
                         text-align: center;
-                        margin-top: 14px;
+                        margin-top: 11px;
+                        width: 60%;
                     }
                 }
             }

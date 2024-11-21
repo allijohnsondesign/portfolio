@@ -16,19 +16,35 @@ $content-width: 1666px;
 
 //Mixins
 @mixin main-btn{
-    width: 337px;
-    height: 71px;
-    filter: drop-shadow(5px 5px 6px rgba($site-black, .5));
+    width: 270px;
+    height: 57px;
+    filter: drop-shadow(4px 4px 5px rgba($site-black, .5));
     border:none;
     border-radius: 50px;
     font-family: lexend-deca-el;
-    font-size: 40px;
+    font-size: 32px;
     color: $site-black;
     background-color: $site-white;
     cursor: pointer;
+
+    @media screen and (max-width: 800px) {
+        width: 180px;
+        height: 46px;
+        font-size: 28px;
+    }
 }
 
 @mixin margin{
     margin-left: 151px;
     margin-right: 151px;
+
+    @media screen and (max-width: 1200px) {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    @media screen and (max-width: 800px) {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }

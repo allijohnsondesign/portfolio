@@ -11,10 +11,10 @@
     }
 
     .projects-container {
-        margin-top: 73px;
+        margin-top: 47px;
         display: flex;
         width: 100%;
-        height: 493px;
+        height: 394px;
         position: relative;
 
         .projects-img{
@@ -27,13 +27,13 @@
             display: flex;
             flex-direction: column;
             align-items: end;
-            width: 666px;
-            padding-right: 118px;
-            padding-top: 82px;
+            width: 533px;
+            padding-right: 50px;
+            padding-top: 66px;
 
             h2 {
                 font-family: lexend-exa;
-                font-size: 48px;
+                font-size: 38px;
                 color: $site-black;
                 text-align: left;
                 white-space: nowrap;
@@ -41,7 +41,7 @@
 
             p {
                 font-family: lexend-deca-el;
-                font-size: 32px;
+                font-size: 26px;
                 color: $site-black;
             }
 
@@ -55,12 +55,20 @@
             position:absolute;
             top: -105px;
             left: -83px;
+            width: 256px;
         }
 
         img.glitter-3{
             position:absolute;
             top:-100px;
             right:-60px;
+            width: 207px;
+        }
+
+        @media screen and (max-width: 800px) {
+            img.glitter-1, img.glitter-3{
+                visibility: hidden;
+            }
         }
     }
 
