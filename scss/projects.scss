@@ -13,13 +13,20 @@
     .projects-container {
         margin-top: 47px;
         display: flex;
+        justify-content: space-between;
         width: 100%;
-        height: 394px;
+        height: 260px;
         position: relative;
 
         .projects-img{
-            width: 1000px;
+            width: 100%;
             background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            @media screen and (max-width: 800px) {
+                width: 0;
+            }
         }
 
 
@@ -27,16 +34,26 @@
             display: flex;
             flex-direction: column;
             align-items: end;
+            justify-content: center;
             width: 533px;
             padding-right: 50px;
-            padding-top: 66px;
+
+            @media screen and (max-width: 800px) {
+                align-items: center;
+                padding-right: 0;
+                width: 100%;
+            }
 
             h2 {
                 font-family: lexend-exa;
-                font-size: 38px;
+                font-size: 48px;
                 color: $site-black;
-                text-align: left;
+                text-align: right;
                 white-space: nowrap;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 38px;
+                }
             }
 
             p {
@@ -47,7 +64,7 @@
 
             button {
                 @include main-btn;
-                margin-top: 40px;
+                margin-top: 20px;
             }
         }
 
@@ -72,29 +89,42 @@
         }
     }
 
-    .project-game {
-        background-color: $style-color-4;
+    .project-graphic {
+        background-color: $content-color;
 
         .projects-img{
-            background-image: linear-gradient(to right, rgba(0,0,0,0), $style-color-4),
+            background-image: linear-gradient(to right, rgba(0,0,0,0), $content-color),
+            url(../assets/images/project-graphics-img.png);
+        }
+
+        button {
+            background-color: $site-white;
+        }
+    }
+
+    .project-game {
+        background-color: $content-color;
+
+        .projects-img{
+            background-image: linear-gradient(to right, rgba(0,0,0,0), $content-color),
             url(../assets/images/project-game-img.png);
         }
 
         button {
-            background-color: #FFD499;
+            background-color: $site-white;
         }
     }
 
     .project-interaction {
-        background-color: $style-color-2;
+        background-color: $content-color;
 
         .projects-img{
-            background-image: linear-gradient(to right, rgba(0,0,0,0), $style-color-2),
+            background-image: linear-gradient(to right, rgba(0,0,0,0), $content-color),
             url(../assets/images/project-interaction-img.png);
         }
 
         button {
-            background-color: #C9FFCD;
+            background-color: $site-white;
         }
     }
 }

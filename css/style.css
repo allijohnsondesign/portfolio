@@ -445,18 +445,16 @@ nav.header a {
   justify-content: center;
   align-items: center;
   border-radius: 70px;
+  filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.25));
 }
 #about #about-content #about-socials a img {
   width: 54px;
 }
 #about #about-content #about-socials a:nth-child(1) {
-  background-color: #FFFF94;
+  background-color: #fff;
 }
 #about #about-content #about-socials a:nth-child(2) {
-  background-color: #94FF9B;
-}
-#about #about-content #about-socials a:nth-child(3) {
-  background-color: #94FFF6;
+  background-color: #fff;
 }
 #about #about-content img.glitter {
   position: absolute;
@@ -492,28 +490,48 @@ nav.header a {
 #projects .projects-container {
   margin-top: 47px;
   display: flex;
+  justify-content: space-between;
   width: 100%;
-  height: 394px;
+  height: 260px;
   position: relative;
 }
 #projects .projects-container .projects-img {
-  width: 1000px;
+  width: 100%;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 800px) {
+  #projects .projects-container .projects-img {
+    width: 0;
+  }
 }
 #projects .projects-container .proj-txt {
   display: flex;
   flex-direction: column;
   align-items: end;
+  justify-content: center;
   width: 533px;
   padding-right: 50px;
-  padding-top: 66px;
+}
+@media screen and (max-width: 800px) {
+  #projects .projects-container .proj-txt {
+    align-items: center;
+    padding-right: 0;
+    width: 100%;
+  }
 }
 #projects .projects-container .proj-txt h2 {
   font-family: lexend-exa;
-  font-size: 38px;
+  font-size: 48px;
   color: #000;
-  text-align: left;
+  text-align: right;
   white-space: nowrap;
+}
+@media screen and (max-width: 800px) {
+  #projects .projects-container .proj-txt h2 {
+    font-size: 38px;
+  }
 }
 #projects .projects-container .proj-txt p {
   font-family: lexend-deca-el;
@@ -531,7 +549,7 @@ nav.header a {
   color: #000;
   background-color: #fff;
   cursor: pointer;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 @media screen and (max-width: 800px) {
   #projects .projects-container .proj-txt button {
@@ -557,23 +575,32 @@ nav.header a {
     visibility: hidden;
   }
 }
+#projects .project-graphic {
+  background-color: #D4D4D4;
+}
+#projects .project-graphic .projects-img {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #D4D4D4), url(../assets/images/project-graphics-img.png);
+}
+#projects .project-graphic button {
+  background-color: #fff;
+}
 #projects .project-game {
-  background-color: #FFAA34;
+  background-color: #D4D4D4;
 }
 #projects .project-game .projects-img {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #FFAA34), url(../assets/images/project-game-img.png);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #D4D4D4), url(../assets/images/project-game-img.png);
 }
 #projects .project-game button {
-  background-color: #FFD499;
+  background-color: #fff;
 }
 #projects .project-interaction {
-  background-color: #94FF9B;
+  background-color: #D4D4D4;
 }
 #projects .project-interaction .projects-img {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #94FF9B), url(../assets/images/project-interaction-img.png);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #D4D4D4), url(../assets/images/project-interaction-img.png);
 }
 #projects .project-interaction button {
-  background-color: #C9FFCD;
+  background-color: #fff;
 }
 
 .overlay-gradient {

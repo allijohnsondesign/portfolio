@@ -290,6 +290,7 @@
                 justify-content: center;
                 align-items: center;
                 border-radius: 70px;
+                filter: drop-shadow(5px 5px 6px rgba($site-black,.25));
 
                 img {
                     width: 54px;
@@ -297,15 +298,11 @@
             }
 
             a:nth-child(1){
-                background-color: $style-color-1;
+                background-color: $site-white;
             }
 
             a:nth-child(2){
-                background-color: $style-color-2;
-            }
-
-            a:nth-child(3){
-                background-color: $style-color-3;
+                background-color: $site-white;
             }
         }
 
