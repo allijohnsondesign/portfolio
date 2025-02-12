@@ -15,10 +15,6 @@
   src: url(../assets/fonts/LexendDeca-ExtraLight.ttf);
 }
 @font-face {
-  font-family: lexend-deca-el;
-  src: url(../assets/fonts/LexendDeca-ExtraLight.ttf);
-}
-@font-face {
   font-family: lexend-l;
   src: url(../assets/fonts/Lexend-Light.ttf);
 }
@@ -33,6 +29,14 @@
 @font-face {
   font-family: lexend-deca;
   src: url(../assets/fonts/LexendDeca-Regular.ttf);
+}
+@font-face {
+  font-family: lexend-deca-m;
+  src: url(../assets/fonts/LexendDeca-Medium.ttf);
+}
+@font-face {
+  font-family: lexend-deca-l;
+  src: url(../assets/fonts/LexendDeca-Light.ttf);
 }
 /*
   1. Use a more-intuitive box-sizing model.
@@ -878,6 +882,40 @@ nav.header a {
   text-align: center;
   margin-top: 11px;
   width: 60%;
+}
+#project-list .graphic-design-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+#project-list .graphic-design-container .graphic-design-box {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#project-list .graphic-design-container .graphic-design-box .graphic-design-img {
+  width: 300px;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 15px;
+}
+#project-list .graphic-design-container .graphic-design-box h3 {
+  font-family: lexend-deca-m;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+#project-list .graphic-design-container .graphic-design-box p {
+  font-family: lexend-deca-l;
+  text-align: center;
+  font-size: 22px;
 }
 
 footer {
