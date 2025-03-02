@@ -234,6 +234,10 @@
         margin: 0 auto;
         margin-top: 100px;
 
+        a {
+            text-decoration: none;
+        }
+
         .graphic-design-box {
             width: 300px;
             display: flex;
@@ -244,9 +248,10 @@
                 width: 300px;
                 height: 300px;
                 background-position: center;
-                background-size: cover;
+                background-size: 100%;
                 background-repeat: no-repeat;
                 margin-bottom: 15px;
+                transition: background-size .3s;
             }
 
             h3 {
@@ -254,13 +259,22 @@
                 text-align: center;
                 margin-bottom: 15px;
                 font-size: 22px;
+                color: $site-black;
             }
 
             p {
                 font-family: lexend-deca-l;
                 text-align: center;
                 font-size: 22px;
+                color: $site-black;
             }
+        }
+
+        .graphic-design-box:hover {
+            .graphic-design-img {
+                background-size: 110%;
+            }
+            
         }
     }
 }
